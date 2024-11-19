@@ -19,10 +19,6 @@ class LoginFalse extends Site {
     get signoutButton () {
         return $('a[id="logout_sidebar_link"]')
     }
-    async logout () {
-        await this.hamburgerMenu.click();
-        await this.signoutButton.click();
-    }
     async invalidLogin (username, password) {
         await this.UsernameEnter.setValue(username);
         await this.UsernameEnter.setValue(password);
